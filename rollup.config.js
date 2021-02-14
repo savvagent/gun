@@ -9,7 +9,7 @@ export default [
     input: sea,
     plugins: [ resolve({preferBuiltins: false}), commonJs() ],
     output: {
-      file: 'dist/sea.esm.js',
+      file: 'dist/sea.js',
       format: 'es'
     }
   },
@@ -17,7 +17,7 @@ export default [
     input: gun,
     plugins: [ resolve({preferBuiltins: false}), commonJs() ],
     output: {
-      file: 'dist/gun.esm.js',
+      file: 'dist/gun.js',
       format: 'es'
     }
   }
