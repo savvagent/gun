@@ -70,6 +70,8 @@
     "text-encoding": "^0.7.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.1.1",
     "@types/ip": "^1.1.0",
     "@types/mocha": "^7.0.1",
     "@types/node": "^13.7.0",
@@ -77,10 +79,11 @@
     "@types/ws": "^7.2.1",
     "aws-sdk": "^2.528.0",
     "ip": "^1.1.5",
+    "iris-messenger": "github:irislib/iris-messenger",
     "mocha": "^6.2.0",
     "panic-manager": "^1.2.0",
     "panic-server": "^1.1.1",
-    "iris-messenger": "github:irislib/iris-messenger",
+    "rollup": "^2.39.0",
     "uglify-js": "^3.6.0"
   }
 }
