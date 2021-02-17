@@ -13,7 +13,6 @@
     "e2e": "mocha e2e/distributed.js",
     "https": "HTTPS_KEY=test/https/server.key HTTPS_CERT=test/https/server.crt npm start",
     "minify": "uglifyjs gun.js -o gun.min.js -c -m",
-    "postinstall": "npx rollup -c",
     "prepublishOnly": "npm run unbuild",
     "start": "node --prof examples/http.js",
     "test": "mocha",

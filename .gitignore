@@ -18,4 +18,3 @@ isolate*.log
 !/types/**/*.d.ts
 /gun.ts
 /temp/
-dist/
