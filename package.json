@@ -8,16 +8,17 @@
   "ios": "browser.ios.js",
   "android": "browser.android.js",
   "scripts": {
-    "start": "node --prof examples/http.js",
     "debug": "node --prof-process --preprocess -j isolate*.log > v8.json && rm isolate*.log && echo 'drag & drop ./v8.json into https://mapbox.github.io/flamebearer/'",
-    "https": "HTTPS_KEY=test/https/server.key HTTPS_CERT=test/https/server.crt npm start",
-    "prepublishOnly": "npm run unbuild",
-    "test": "mocha",
-    "testsea": "mocha test/sea/sea.js",
-    "testaxe": "mocha test/axe/holy-grail.js",
-    "e2e": "mocha e2e/distributed.js",
     "docker": "hooks/build",
+    "e2e": "mocha e2e/distributed.js",
+    "https": "HTTPS_KEY=test/https/server.key HTTPS_CERT=test/https/server.crt npm start",
     "minify": "uglifyjs gun.js -o gun.min.js -c -m",
+    "postinstall": "npx rollup -c",
+    "prepublishOnly": "npm run unbuild",
+    "start": "node --prof examples/http.js",
+    "test": "mocha",
+    "testaxe": "mocha test/axe/holy-grail.js",
+    "testsea": "mocha test/sea/sea.js",
     "unbuild": "node lib/unbuild.js & npm run minify",
     "unbuildMeta": "node lib/unbuild.js lib/meta"
   },
@@ -56,6 +57,7 @@
     "node": ">=0.8.4"
   },
   "dependencies": {
+    "npm-run-all": "^4.1.5",
     "ws": "^7.2.1"
   },
   "optionalDependencies": {
